@@ -477,6 +477,7 @@ const switchValue = _=>{
 }
 
 document.querySelector('.bed').addEventListener('click',e=>{
+    return;
     e.preventDefault();
 
     switchValue();
