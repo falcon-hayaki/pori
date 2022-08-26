@@ -1,8 +1,7 @@
-<a href="https://lab.magiconch.com/sakana/?v=takina" target="_blank">
-  <img src="html/sakana.png" height="160px">
-</a><a href="https://lab.magiconch.com/sakana/?v=chisato" target="_blank">
-  <img src="html/chisato.png" height="160px">
-</a>
+<a href="http://pori.hayaki.icu/" target="_blank">
+  <img src="html/pori.png" height="160px">
+
+# ~~懒得改readme了，以下是原作readme~~
 
 # 🐟「Sakana!」石蒜模拟器
 
