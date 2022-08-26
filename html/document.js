@@ -13,7 +13,7 @@ htmlEl.setAttribute('data-device',device)
 
 
 const sticky = 0.1;
-let inertia = 0.08;
+let inertia = 0.02;
 const maxR = 60;
 const maxY = 110;
 const minY = -maxY;
@@ -57,6 +57,13 @@ const Values = {
         t: 0, // 垂直速度
         w: 0, // 横向速度
         d: 0.988 // 衰减
+    },
+    pori: {
+        r: 12, // 角度
+        y: 2, // 高度
+        t: 0, // 垂直速度
+        w: 0, // 横向速度
+        d: 0.8 // 衰减
     }
 };
 
@@ -75,6 +82,7 @@ const voiceButton = document.querySelector('.set-voice');
 const Voices = {
     chisato: new Audio('chinanago.mp3'),
     takina: new Audio('sakana.mp3'),
+    pori: new Audio('pori.wav'),
 
     isMute: true
 };
@@ -354,7 +362,7 @@ el.ontouchstart = e=>{
 const playVoice = () => {
     if (Voices.isMute) return;
     // console.log({ r: v.r, y: v.y })
-
+    
     if (el.classList.contains('chisato')) {
         if (
             // 'nice chin~a~na~go~' 经验值
@@ -364,7 +372,7 @@ const playVoice = () => {
             console.log('%cchin~a~na~go~','color:#FED;background-color:#C34;padding:2px 4px;');
             Voices.chisato.play();
         };
-    } else {
+    } else if (el.classList.contains('takina')) {
         if (
             // 'nice sakana~' 经验值
             v.r >= Values.takina.r
@@ -373,6 +381,9 @@ const playVoice = () => {
             console.log('%csakana~','color:#CCC;background-color:#235;padding:2px 4px;');
             Voices.takina.play();
         };
+    } else {
+        console.log('%cpori~','color:#CCC;background-color:#235;padding:2px 4px;');
+        Voices.pori.play();
     };
 };
 

@@ -2,7 +2,9 @@
     --app-height: 100vh;
 }
 html{
-    background: #3f80b6;
+    background: url('bg.png');
+    background-position: center;
+    background-size:cover;
     color: #FFF;
     overflow: hidden;
     font: 16px sans-serif;
@@ -93,11 +95,14 @@ canvas{
         pointer-events: auto;
         transform-origin: 50% 400px;
         background: no-repeat 50% 50%;
-        background-size:cover;
-        background-image: url(sakana.png);
+        background-size:contain;
+        background-image: url(pori.png);
         // background-image: url(FYlpb3dacAAhuxs.jpg);
         &.chisato{
             background-image: url(chisato.png);
+        }
+        &.takina{
+            background-image: url(sakana.png);
         }
     }
     .bed{
